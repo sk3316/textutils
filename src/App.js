@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Components/Navbar';
+import Navbar from './components/Navbar';
+import TextForms from './components/TextForms';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
     <>
     This is a simple navbar taken from bootstrap official site.
     <Navbar title="textutils"/>
+    <div class="container">
+      {/* bs5-grid-row */}
+      <TextForms/>
+    </div>
     </>
 
   );
