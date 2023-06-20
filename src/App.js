@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForms from './components/TextForms';
+import About from './components/About';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       {/* bs5-grid-row */}
       <TextForms/>
     </div>
+    <About/>
     </>
 
   );
