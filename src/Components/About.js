@@ -1,6 +1,6 @@
 import React, { PureComponent, useState } from 'react'
 
-export default class About extends PureComponent {
+export default class About extends PureComponent{
     render()
     {
          const [myStyle,setMyStyle]=useState({
@@ -12,7 +12,7 @@ export default class About extends PureComponent {
 
 
          const toggleStyle= ()=>{
-            if (myStyle.color=='white') {
+            if (myStyle.color=='white'){
                 setMyStyle({
                     color: 'black',
                     backgroundColor:'white',
