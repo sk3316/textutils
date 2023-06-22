@@ -3,8 +3,22 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForms from './components/TextForms';
 import About from './components/About';
+import React,{useState} from 'react';
+
 
 function App() {
+  const[mode,setMode]= useState('light');
+  const toggleMode = ()=>{
+    if (mode == 'light') {
+      setMode('dark'); 
+      // document.body.Style     
+    }
+    else
+    {
+      setMode('light');
+    }
+    
+  }
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -24,12 +38,12 @@ function App() {
     // </div>
     <>
     This is a simple navbar taken from bootstrap official site.
-    <Navbar title="textutils"/>
-    <div class="container">
+    <Navbar title="textutils" mode={mode} toggleMode={toggleMode}/>
+    <div className="container">
       {/* bs5-grid-row */}
       <TextForms/>
     </div>
-    <About/>
+    {/* <About/> */}
     </>
 
   );
