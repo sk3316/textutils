@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import TextForms from './components/TextForms';
 import About from './components/About';
 import React,{useState} from 'react';
+import Alert from './components/Alert';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
     <>
     This is a simple navbar taken from bootstrap official site.
     <Navbar title="textutils" mode={mode} toggleMode={toggleMode}/>
+    <Alert alert="''this is a alert''  "/>
     <div className="container">
       {/* bs5-grid-row */}
       <TextForms/>
