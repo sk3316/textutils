@@ -5,6 +5,12 @@ import TextForms from './components/TextForms';
 import About from './components/About';
 import React,{useState} from 'react';
 import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -38,14 +44,26 @@ function App() {
     //   </header>
     // </div>
     <>
+    <Router>
+
     This is a simple navbar taken from bootstrap official site.
     <Navbar title="textutils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert="''this is a alert''  "/>
-    <div className="container">
-      {/* bs5-grid-row */}
-      <TextForms/>
-    </div>
-    {/* <About/> */}
+    <Switch>
+          <Routes path="/about">
+            <About/>
+          </Routes>
+         
+          <Routea path="/">
+              {/* <div className="container"> */}
+             
+              <TextForms/>
+              {/* </div> */}
+          </Routea>
+    </Switch>
+    
+    <About/>
+</Router>
     </>
 
   );
